@@ -1,7 +1,7 @@
 const express = require('express');
 const path = require('path');
 // Import the two parts of the GraphQL schema
-const { typeDefs,resolvers } require('./schemas');
+const { typeDefs,resolvers } = require('./schemas');
 const db = require('./config/connection');
 
 // const routes = require('./routes');
@@ -20,7 +20,7 @@ const server = new ApolloServer({
 });
 
 // Instance of Apollo Server with GraphQL schema
-const startApolloServer = aync () => {
+const startApolloServer = async () => {
   await server.start();
 
 
